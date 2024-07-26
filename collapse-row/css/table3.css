@@ -1,0 +1,45 @@
+.container {
+    width: 500px;
+    height: 300px;
+    background-color: #ddd;
+    overflow: auto;
+    border: 1px solid #ccc;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+    overflow-x: scroll;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid #ccc;
+}
+th {
+    font-weight: 600;
+    text-align: left;
+    background-color: #f1f4f7;
+}
+.fixed-td {
+    position: sticky;
+    width: 100px;
+    z-index: 2;
+    left: 0;
+    background-color: #fff;
+    /* Remove the box shadow from here */
+}
+.fixed-hd {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.left-top-td {
+    z-index: 3;
+}
+.scrollable-td {
+    width: 200px;
+}
+
+/* New class for adding box shadow on scroll */
+.fixed-td.shadow {
+    box-shadow: 2px 0 5px -2px rgba(0,0,0,0.5);
+}

@@ -1,0 +1,79 @@
+.accordion-button {
+    --bs-accordion-btn-padding-x: 1.25rem;
+    --bs-accordion-btn-padding-y: 8px;
+    --bs-accordion-btn-color: #224273;
+    --bs-accordion-btn-bg: #BAD6F5;
+    --bs-accordion-transition: all 0.3s ease;
+  
+  
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x) !important; */
+    font-size: 1rem;
+    color: var(--bs-accordion-btn-color) !important;
+    text-align: left;
+    background-color: var(--bs-accordion-btn-bg) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    overflow-anchor: none;
+    transition: var(--bs-accordion-transition);
+    box-shadow: none;
+    padding: var(--bs-accordion-btn-padding-y) 0 !important;
+  }
+  
+
+  .accordion-button::after {
+    --bs-accordion-btn-icon-width: 11px;
+    --bs--accordion-btn-color: #224273;
+    width: var(--bs-accordion-btn-icon-width);
+    color: var(--bs--accordion-btn-color);
+  }
+
+button.custom-accordion-button{
+    padding-left: 30px !important;
+}
+
+.custom-accordion-button::after{
+    position: absolute;
+    left: 0;
+}
+
+.clearsky-normal-text {
+    font-size: 12px !important;
+  }
+
+  .accordion-button:focus {
+    box-shadow: unset;
+}
+
+.focus-none:focus {
+    box-shadow: unset !important;
+}
+
+.table th, .table td {
+    padding: 0.75rem; /* Default Bootstrap padding */
+    vertical-align: top; /* Align cell contents to the top */
+    /* border-top: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;  */
+    border: 1px solid #dee2e6;
+}
+
+.accordion-body {
+    padding: 0 !important; /* Remove default padding to match table spacing */
+}
+
+.accordion-body .table {
+    margin-bottom: 0; /* Remove margin at the bottom of the table */
+}
+
+.accordion-button {
+    width: 100%;
+    text-align: left; /* Make sure button text aligns with the table */
+}
+
+.custom-container{
+    width: 100% !important;
+    max-width: 1000px !important;
+}

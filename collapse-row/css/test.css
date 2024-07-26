@@ -1,0 +1,13 @@
+/* Ensure both tables use the same width for each column */
+#main-table th, #accordion-table td {
+    width: 100px; /* Example width */
+  }
+  
+  #main-table th:nth-child(2), #accordion-table td:nth-child(2) {
+    width: 150px; /* Example width */
+  }
+  
+  #main-table th:nth-child(3), #accordion-table td:nth-child(3) {
+    width: 200px; /* Example width */
+  }
+  
