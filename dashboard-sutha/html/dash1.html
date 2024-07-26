@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/dash1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <aside class="sidebar">
+        <div class="logo_details">
+            <i class="bi bi-wifi icon"></i>
+            <div class="logo_name">Terabot</div>
+            <i class="bi bi-list" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li class="dropdown">
+                <a href="#">
+                    <i class="bi bi-grid-fill"></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bi bi-person-fill"></i>
+                    <span class="link_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-gear-fill"></i>
+                    <span class="link_name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+            <li class="profile">
+                <div class="profile_details">
+                    <i class="bi bi-person-fill"></i>
+                    <div class="profile_content">
+                        <div class="name">Profile</div>
+                    </div>
+                </div>
+                <i class="bi bi-box-arrow-left" id="log_out"></i>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="container">
+        <div class="card card-color">
+            <div class="card-body d-flex justify-content-between hstack gap-3 p-1">
+                <a class="navbar-brand ms-2" href="#">
+                    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30"
+                        height="24" class="d-inline-block align-text-top">
+                    Bootstrap
+                </a>
+                <form class="d-flex w-25 p-2" role="search">
+                    <input class="dash-button me-2 w-50 mt-2 dash-font-small ps-1" type="search" placeholder="Search" aria-label="Search">
+                    <button class="dash-btn-search dash-font-small mt-2 fw-medium" type="submit">Search</button>
+                </form>   
+                <div class="p-2 ms-auto">
+                    <button type="button" class="btn btn-primary rounded-5 badg-btns me-2">
+                        <i class="bi bi-bell-fill position-relative float-end">
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                99+
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </i>
+                    </button>
+                    <button type="button" class="btn btn-primary position-relative rounded-5 badg-btns">
+                        <i class="bi bi-chat-fill position-relative float-end">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </i>
+                    </button> 
+                </div>           
+                                
+                <div class="dropdown p-2">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar rounded-5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="true">                    
+                    <ul class="dropdown-menu">
+                        <a class="dropdown-item" href="#">My Profile</a>
+                        <a class="dropdown-item" href="#"><h5>Sutha Veni L</h5></a>
+                        <a class="dropdown-item" href="#">Software Developer</a>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill me-2"></i>Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill me-2"></i>Account Settings</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Log out</a></li>
+                      </ul>
+                </div>
+                
+
+            </div>
+        </div>
+
+        <div class="bckgd-color pb-21"></div>
+
+        <div class="mt-n22 px-6 container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mb-2 mb-lg-0">
+                                <h3 class="mb-0  dash-text-white">
+                                    Projects</h3>
+                            </div>
+                            <div><a class="dash-create-btn fw-medium" href="/#"><span>Create New Project</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 col-xl-3 col-lg-6 col-md-12 col-12">
+                    <div class="card shadow card-colr">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h4 class="mb-0 dash-text-color">Projects</h4>
+                                </div>
+                                <div class="icon-shape icon-md bg-light-primary text-card rounded-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="18" height="18"
+                                        fill="currentColor">
+                                        <path
+                                            d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="fw-bold dash-font-large">18</h3>
+                                <p class="mb-0 dash-font-small"><span classname="text-dark me-2">2</span> Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 col-xl-3 col-lg-6 col-md-12 col-12">
+                    <div class="card shadow card-colr">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h4 class="mb-0 dash-text-color">Active Task</h4>
+                                </div>
+                                <div class="icon-shape icon-md bg-light-primary text-card rounded-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="18" height="18"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z">
+                                        </path>
+                                        <path
+                                            d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9z">
+                                        </path>
+                                        <path fill-rule="evenodd"
+                                            d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V7zM2 7h1v1H2V7zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H2zm1 .5H2v1h1v-1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="fw-bold dash-font-large">132</h3>
+                                <p class="mb-0 dash-font-small">
+                                    <span classname="text-dark me-2">28</span>
+                                    Completed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 col-xl-3 col-lg-6 col-md-12 col-12">
+                    <div class="card shadow card-colr">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h4 class="mb-0 dash-text-color">Teams</h4>
+                                </div>
+                                <div class="icon-shape icon-md bg-light-primary text-card rounded-2">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="18" height="18"
+                                        fill="currentColor">
+                                        <path
+                                            d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z">
+                                        </path>
+                                    </svg></div>
+                            </div>
+                            <div>
+                                <h3 class="fw-bold dash-font-large">12</h3>
+                                <p class="mb-0 dash-font-small"><span classname="text-dark me-2">1</span> Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 col-xl-3 col-lg-6 col-md-12 col-12">
+                    <div class="card shadow card-colr">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h4 class="mb-0 dash-text-color">Productivity</h4>
+                                </div>
+                                <div class="icon-shape icon-md bg-light-primary text-card rounded-2">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="18" height="18"
+                                        fill="currentColor">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                        </path>
+                                        <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z">
+                                        </path>
+                                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z">
+                                        </path>
+                                        <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path>
+                                    </svg></div>
+                            </div>
+                            <div>
+                                <h3 class="fw-bold dash-font-large">76%</h3>
+                                <p class="mb-0 dash-font-small"><span classname="text-dark me-2">5%</span> Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row pt-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card_header_bg fw-medium" style="cursor: pointer;">
+                        Active Projects      
+                        <i class="bi bi-table float-end" onclick="applyTheme('theme1')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Striped-table"></i> 
+                        <i class="bi bi-table float-end me-2" onclick="applyTheme('theme2')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Table with header highlight"></i>   
+                        <i class="bi bi-table float-end me-2" onclick="applyTheme('theme3')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Dark table"></i> 
+                        <i class="bi bi-table float-end me-2" onclick="applyTheme('theme4')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Borderless table"></i> 
+                        <i class="bi bi-table float-end me-2" onclick="applyTheme('theme5')" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Dark Borderless table"></i>   
+                    </div>
+                    <div class="card-body">
+                        <table class="table caption-top table-hover" id="myTable">
+                            <!-- <caption>Active Projects</caption> -->
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Task Name</th>
+                                    <th scope="col">Hours</th>
+                                    <th scope="col">Priority</th>
+                                    <th scope="col">Members</th>
+                                    <th scope="col">Progress</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td>
+                                        Dropbox Design System</td>
+                                    <td>35</td>
+                                    <td><span class="badge text-bg-success">High</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 25%">25%</div>
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">2</td>
+
+                                    <td>Jacob</td>
+                                    <td>42</td>
+                                    <td><span class="badge text-bg-secondary">Medium</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div>
+                                        </td>
+
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 50%">50%</div>
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">3</td>
+
+                                    <td>Larry</td>
+                                    <td>12</td>
+                                    <td><span class="badge text-bg-success">High</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div>                                     
+                                    </td>
+
+
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 75%">75%</div>
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">4</td>
+
+                                    <td>Larry</td>
+                                    <td>6</td>
+                                    <td><span class="badge text-bg-danger">Track</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div>     
+                                        </td>
+
+
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 100%">100%</div>
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">5</td>
+
+                                    <td>Mark</td>
+                                    <td>48</td>
+                                    <td><span class="badge text-bg-warning">Low</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div>
+                                        </td>
+
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 100%">100%</div>
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">6</td>
+
+                                    <td>Jacob</td>
+                                    <td>16</td>
+                                    <td><span class="badge text-bg-warning">Low</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div>
+                                        </td>
+
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 75%">75%</div>
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">7</td>
+
+                                    <td>Larry</td>
+                                    <td>12</td>
+                                    <td><span class="badge text-bg-success">High</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div>
+                                        </td>
+
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 95%">95%</div>
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">8</td>
+
+                                    <td>Larry</td>
+                                    <td>20</td>
+                                    <td><span class="badge text-bg-success">High</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div>
+                                        </td>
+
+
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 40%">40%</div>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">9</td>
+
+                                    <td>Mark</td>
+                                    <td>22</td>
+                                    <td><span class="badge text-bg-success">High</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div>   
+                                        </td>
+
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 15%">5%</div>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">10</td>
+
+                                    <td>Jacob</td>
+                                    <td>32</td>
+                                    <td><span class="badge text-bg-success">High</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div>   
+                                        </td>
+
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 60%">60%</div>
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">11</td>
+
+                                    <td>Larry</td>
+                                    <td>16</td>
+                                    <td><span class="badge text-bg-success">High</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div> 
+                                        </td>
+
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 20%">20%</div>
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">12</td>
+
+                                    <td>Larry</td>
+                                    <td>10</td>
+                                    <td><span class="badge text-bg-success">High</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm position-relative">
+                                            <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar" class="avatar rounded-5">
+                                            <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 18px;">
+                                            <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar" class="avatar position-relative rounded-5" style="right: 35px;">
+                                        </div>   
+                                        </td>
+
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                style="width: 100%">100%</div>
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <script src="../js/dash1.js"></script>
+</body>
+
+</html>
